@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 40vh;
+}
+.title {
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.field {
+  padding: 5px 15px;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.btn {
+  margin: 10px auto;
+  width: 120px;
+  padding: 5px 0px;
+  font-weight: 600;
+}

@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  gap: 15px;
+  max-width: 1440px;
+  flex-wrap: wrap;
+}
+
+.item {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10;
+  width: 400px;
+  height: 80px;
+}
