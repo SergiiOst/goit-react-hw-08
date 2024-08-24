@@ -3,7 +3,8 @@ import {
   fetchContactsThunk,
   deleteContactsThunk,
   addContactsThunk,
-} from "./contactsOps";
+} from "./operations";
+import { logoutThunk } from "../auth/operations";
 
 const initialState = {
   contacts: [],
@@ -20,7 +21,7 @@ const slice = createSlice({
         state.contacts = action.payload;
         state.isLoading = false;
       })
-      .addCase(fetchContactsThunk.pending, (state, action) => {
+      .addCase(fetchContactsThunk.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(deleteContactsThunk.fulfilled, (state, action) => {
@@ -28,11 +29,14 @@ const slice = createSlice({
           (contact) => contact.id !== action.payload
         );
       })
-      .addCase(deleteContactsThunk.rejected, (state, action) => {
+      .addCase(deleteContactsThunk.rejected, (state) => {
         state.isError = true;
       })
       .addCase(addContactsThunk.fulfilled, (state, action) => {
         state.contacts.push(action.payload);
+      })
+      .addCase(logoutThunk.fulfilled, () => {
+        return initialState;
       });
   },
 });
