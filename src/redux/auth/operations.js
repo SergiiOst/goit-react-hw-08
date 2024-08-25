@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { clearToken, contactsApi, setToken } from "../../config/contactsAPI";
+import { clearToken, contactsApi, setToken } from "../../config/contactsApi";
 
 export const registerThunk = createAsyncThunk(
   "register",
