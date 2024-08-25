@@ -13,6 +13,7 @@ const initialState = {
   },
   token: "",
   isLoggedIn: false,
+  isRefreshing: false,
 };
 
 const slice = createSlice({
@@ -34,9 +35,16 @@ const slice = createSlice({
         state.isLoggedIn = true;
         state.name = action.payload.name;
         state.email = action.payload.email;
+        state.isRefreshing = false;
       })
       .addCase(logoutThunk.fulfilled, () => {
         return initialState;
+      })
+      .addCase(getMeThunk.pending, (state) => {
+        state.isRefreshing = true;
+      })
+      .addCase(getMeThunk.rejected, (state) => {
+        state.isRefreshing = false;
       });
   },
 });

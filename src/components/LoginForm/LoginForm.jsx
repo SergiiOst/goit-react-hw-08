@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import { loginThunk } from "../../redux/auth/operations";
 import { selectIsLoggedIn } from "../../redux/auth/selector";
+import s from "./LoginForm.module.css";
 
 const LoginForm = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -21,9 +22,9 @@ const LoginForm = () => {
     return <Navigate to="/" />;
   }
   return (
-    <div>
+    <div className={s.formWrapper}>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <Form>
+        <Form className={s.form}>
           <Field name="email" placeholder="Enter your email" />
           <Field
             type="password"
