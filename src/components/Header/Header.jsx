@@ -10,7 +10,7 @@ const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <header className={s.header}>
-      <h2>Auth</h2>
+      <h2>Home</h2>
       <h3>{user.name}</h3>
       <ul className={s.list}>
         <li>
@@ -31,7 +31,11 @@ const Header = () => {
         )}
         {isLoggedIn && (
           <li>
-            <button onClick={() => dispatch(logoutThunk())}>Exit</button>
+            <button
+              onClick={() => dispatch(logoutThunk())}
+              className={s.exitBtn}>
+              Exit
+            </button>
           </li>
         )}
       </ul>

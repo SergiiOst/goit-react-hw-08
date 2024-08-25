@@ -5,3 +5,8 @@
   padding: 10px 20px;
   width: 40vh;
 }
+
+.title {
+  font-weight: 600;
+  margin-top: 5px;
+}

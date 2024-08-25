@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(12, 125, 125, 0.3);
+  font-size: 24px;
+  font-weight: 700;
+  color: azure;
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+}
+
+.exitBtn {
+  border-radius: 5px;
+  padding: 10px 25px;
+  background: hsla(156, 2%, 59%, 0.664);
+  border-style: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}

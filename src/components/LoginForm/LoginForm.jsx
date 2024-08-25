@@ -4,7 +4,7 @@ import { Link, Navigate } from "react-router-dom";
 import { loginThunk } from "../../redux/auth/operations";
 import { selectIsLoggedIn } from "../../redux/auth/selector";
 
-const Login = () => {
+const LoginForm = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const initialValues = {
@@ -40,4 +40,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginForm;

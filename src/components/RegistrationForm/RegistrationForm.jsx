@@ -4,7 +4,7 @@ import { Link, Navigate } from "react-router-dom";
 import { registerThunk } from "../../redux/auth/operations";
 import { selectIsLoggedIn } from "../../redux/auth/selector";
 
-const Register = () => {
+const RegistrationForm = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const dispatch = useDispatch();
 
@@ -42,4 +42,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegistrationForm;

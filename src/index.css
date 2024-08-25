@@ -1,3 +1,14 @@
+:root {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #1e1f1f;
+  background-image: url("/public/img/fog.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1.5;
