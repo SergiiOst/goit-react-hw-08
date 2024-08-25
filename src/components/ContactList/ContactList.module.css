@@ -13,3 +13,7 @@
   height: 80px;
   background-color: rgba(12, 125, 125, 0.3);
 }
+.empty {
+  margin: 0 auto;
+  color: rgb(117, 240, 246);
+}

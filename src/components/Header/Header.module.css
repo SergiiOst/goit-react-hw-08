@@ -16,10 +16,25 @@
 
 .exitBtn {
   border-radius: 5px;
-  padding: 10px 25px;
-  background: hsla(156, 2%, 59%, 0.664);
+  padding: 5px 25px;
+  background: rgba(117, 240, 246, 0.664);
   border-style: none;
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
+  &:hover {
+    background-color: rgb(243, 238, 240);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(117, 240, 246);
+  &:hover {
+    color: rgb(243, 238, 240);
+  }
+}
+
+.active {
+  color: rgb(243, 238, 240);
 }

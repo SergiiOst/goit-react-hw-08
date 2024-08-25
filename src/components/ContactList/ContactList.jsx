@@ -19,7 +19,7 @@ const ContactList = () => {
           </li>
         ))
       ) : (
-        <h2>Contact list is empty!</h2>
+        <h2 className={s.empty}>Contact list is empty!</h2>
       )}
     </ul>
   );
